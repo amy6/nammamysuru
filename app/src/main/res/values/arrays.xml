@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="mainImgID">
+        <item>@drawable/mysore_palace_overlay</item>
+        <item>@drawable/venugopalaswamy_temple_overlay</item>
+        <item>@drawable/grs_overlay</item>
+        <item>@drawable/krs_overlay</item>
+        <item>@drawable/bylakuppe_overlay</item>
+        <item>@drawable/ranganthittu_overlay</item>
+    </array>
+
+    <array name="overlayImgID">
+        <item>@drawable/mysore_palace_main</item>
+        <item>@drawable/venugopalaswamy_temple_main</item>
+        <item>@drawable/grs_main</item>
+        <item>@drawable/krs_main</item>
+        <item>@drawable/bylakuppe_main</item>
+        <item>@drawable/ranganthittu_main</item>
+    </array>
+
+    <string-array name="placeTitle">
+        <item>@string/mysore_palace</item>
+        <item>@string/venugopalaswamy_temple</item>
+        <item>@string/grs</item>
+        <item>@string/krs</item>
+        <item>@string/bylakuppe</item>
+        <item>@string/ranganthittu</item>
+    </string-array>
+
+    <string-array name="restaurantName">
+        <item>@string/onesta</item>
+        <item>@string/hotel_mylari</item>
+        <item>@string/the_barge</item>
+        <item>@string/la_uppu</item>
+        <item>@string/old_house</item>
+        <item>@string/frosting_cafe</item>
+        <item>@string/good_vibes</item>
+        <item>@string/indra_cafe</item>
+    </string-array>
+
+
+</resources>

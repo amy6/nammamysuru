@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/places"
+        android:title="Places"
+        android:icon="@drawable/ic_location_on"/>
+
+    <item android:id="@+id/restaurant"
+        android:title="Restaurant"
+        android:icon="@drawable/ic_restaurant"/>
+
+    <item android:id="@+id/shopping"
+        android:title="Shopping"
+        android:icon="@drawable/ic_shopping_basket"/>
+
+    <item android:id="@+id/commute"
+        android:title="Commute"
+        android:icon="@drawable/ic_directions_bus"/>
+
+</menu>
