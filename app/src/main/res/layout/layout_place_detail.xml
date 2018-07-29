@@ -103,12 +103,12 @@
                     android:drawableLeft="@drawable/ic_directions"
                     android:drawablePadding="16dp"
                     android:drawableStart="@drawable/ic_directions"
+                    android:text="Directions"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/overlayImage"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/hours"
-                    tools:text="Directions" />
+                    app:layout_constraintTop_toBottomOf="@+id/hours" />
 
 
             </android.support.constraint.ConstraintLayout>
@@ -121,7 +121,7 @@
             android:layout_height="0dp"
             android:layout_margin="16dp"
             android:layout_weight="1"
-            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing tristique risus nec feugiat in fermentum posuere urna nec. In fermentum et sollicitudin ac. Libero id faucibus nisl tincidunt eget nullam. Sit amet porttitor eget dolor. Neque volutpat ac tincidunt vitae semper quis. Massa tincidunt nunc pulvinar sapien et ligula. Tortor at auctor urna nunc id cursus metus aliquam eleifend. Purus gravida quis blandit turpis cursus. Elementum eu facilisis sed odio morbi." />
+            tools:text="@string/dummy_text" />
 
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
