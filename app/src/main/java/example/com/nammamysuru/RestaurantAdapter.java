@@ -1,7 +1,11 @@
 package example.com.nammamysuru;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.view.ViewCompat;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,14 +36,24 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RestaurantViewHolder holder, int position) {
-        Restaurant restaurant = restaurants.get(position);
+    public void onBindViewHolder(@NonNull final RestaurantViewHolder holder, int position) {
+        final Restaurant restaurant = restaurants.get(position);
         holder.restaurantImg.setImageResource(restaurant.getImageId());
         holder.name.setText(restaurant.getName());
         holder.place.setText(restaurant.getPlace());
         holder.type.setText(restaurant.getType());
         holder.rating.setText(String.valueOf(restaurant.getRating()));
         holder.ratingBar.setRating(restaurant.getRating());
+
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DetailsActivity.class);
+                intent.putExtra("Restaurant", restaurant);
+                ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((MainActivity) context, holder.restaurantImg, ViewCompat.getTransitionName(holder.restaurantImg));
+                context.startActivity(intent, options.toBundle());
+            }
+        });
     }
 
     @Override
@@ -61,8 +75,10 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
         TextView rating;
         @BindView(R.id.ratingBar)
         RatingBar ratingBar;
+        @BindView(R.id.cardView)
+        CardView cardView;
 
-        public RestaurantViewHolder(@NonNull View itemView) {
+        RestaurantViewHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }

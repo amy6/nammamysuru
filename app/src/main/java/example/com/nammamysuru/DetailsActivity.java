@@ -15,8 +15,11 @@ public class DetailsActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        Place place = (Place) getIntent().getSerializableExtra("Place");
-        Fragment fragment = PlaceDetailFragment.newInstance(place);
+        /*Place place = (Place) getIntent().getSerializableExtra("Place");
+        Fragment fragment = PlaceDetailFragment.newInstance(place);*/
+
+        Restaurant restaurant = (Restaurant) getIntent().getSerializableExtra("Restaurant");
+        Fragment fragment = RestaurantDetailFragment.newInstance(restaurant);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
 

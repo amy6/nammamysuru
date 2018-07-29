@@ -27,7 +27,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlacesViewHo
     private ArrayList<Place> places;
     private Context context;
 
-    public PlaceAdapter(ArrayList<Place> places, Context context) {
+    PlaceAdapter(ArrayList<Place> places, Context context) {
         this.places = places;
         this.context = context;
     }
