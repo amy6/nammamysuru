@@ -6,7 +6,7 @@
         android:icon="@drawable/ic_location_on"/>
 
     <item android:id="@+id/restaurant"
-        android:title="Restaurant"
+        android:title="Restaurants"
         android:icon="@drawable/ic_restaurant"/>
 
     <item android:id="@+id/shopping"

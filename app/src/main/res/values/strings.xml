@@ -17,5 +17,17 @@
     <string name="good_vibes">Cafe Good Vibes</string>
     <string name="frosting_cafe">Frosting Cafe</string>
 
+    <string name="indian">Indian</string>
+    <string name="italian">Italian</string>
+    <string name="chinese">Chinese</string>
+    <string name="cafe">Cafe</string>
+
+    <string name="gokulam">Gokulam</string>
+    <string name="doora">Doora</string>
+    <string name="vijaynagar">Vijaynagar</string>
+    <string name="bannimantap">Bannimantap</string>
+    <string name="chamrajpura">Chamrajpura</string>
+
     <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing tristique risus nec feugiat in fermentum posuere urna nec. In fermentum et sollicitudin ac. Libero id faucibus nisl tincidunt eget nullam. Sit amet porttitor eget dolor. Neque volutpat ac tincidunt vitae semper quis. Massa tincidunt nunc pulvinar sapien et ligula. Tortor at auctor urna nunc id cursus metus aliquam eleifend. Purus gravida quis blandit turpis cursus. Elementum eu facilisis sed odio morbi.</string>
+
 </resources>

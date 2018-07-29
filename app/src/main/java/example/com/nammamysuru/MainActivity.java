@@ -29,13 +29,14 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new PlaceFragment();
                         break;
                     case R.id.restaurant:
+                        fragment = new RestaurantFragment();
                         break;
                     case R.id.shopping:
                         break;
                     case R.id.commute:
                         break;
                 }
-                fragmentManager.beginTransaction().add(R.id.container, fragment).commit();
+                fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
                 return true;
             }
         });

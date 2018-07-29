@@ -26,8 +26,9 @@ public class RestaurantFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
+        recyclerView.setNestedScrollingEnabled(false);
         recyclerView.setItemViewCacheSize(20);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-        recyclerView.setAdapter(new RestaurantAdapter(getContext(), RestaurantData.fetchRestaurants()));
+        recyclerView.setAdapter(new RestaurantAdapter(getContext(), RestaurantData.fetchRestaurants(getContext())));
     }
 }

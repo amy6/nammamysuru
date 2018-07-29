@@ -15,24 +15,24 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHodler> {
+public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder> {
 
     private Context context;
     private ArrayList<Restaurant> restaurants;
 
-    public RestaurantAdapter(Context context, ArrayList<Restaurant> restaurants) {
+    RestaurantAdapter(Context context, ArrayList<Restaurant> restaurants) {
         this.context = context;
         this.restaurants = restaurants;
     }
 
     @NonNull
     @Override
-    public RestaurantViewHodler onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new RestaurantViewHodler(LayoutInflater.from(context).inflate(R.layout.layout_restaurant_item, parent, false));
+    public RestaurantViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new RestaurantViewHolder(LayoutInflater.from(context).inflate(R.layout.layout_restaurant_item, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RestaurantViewHodler holder, int position) {
+    public void onBindViewHolder(@NonNull RestaurantViewHolder holder, int position) {
         Restaurant restaurant = restaurants.get(position);
         holder.restaurantImg.setImageResource(restaurant.getImageId());
         holder.name.setText(restaurant.getName());
@@ -47,7 +47,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
         return restaurants.size();
     }
 
-    class RestaurantViewHodler extends RecyclerView.ViewHolder {
+    class RestaurantViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.restaurantImage)
         ImageView restaurantImg;
@@ -62,7 +62,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
         @BindView(R.id.ratingBar)
         RatingBar ratingBar;
 
-        public RestaurantViewHodler(@NonNull View itemView) {
+        public RestaurantViewHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }

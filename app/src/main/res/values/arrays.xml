@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <array name="mainImgID">
+    <array name="place_mainImgID">
         <item>@drawable/mysore_palace_overlay</item>
         <item>@drawable/venugopalaswamy_temple_overlay</item>
         <item>@drawable/grs_overlay</item>
@@ -10,7 +10,7 @@
         <item>@drawable/ranganthittu_overlay</item>
     </array>
 
-    <array name="overlayImgID">
+    <array name="place_overlayImgID">
         <item>@drawable/mysore_palace_main</item>
         <item>@drawable/venugopalaswamy_temple_main</item>
         <item>@drawable/grs_main</item>
@@ -28,6 +28,18 @@
         <item>@string/ranganthittu</item>
     </string-array>
 
+
+    <array name="restaurant_mainImgID">
+        <item>@drawable/onesta</item>
+        <item>@drawable/hotel_mylari</item>
+        <item>@drawable/the_barge</item>
+        <item>@drawable/la_uppu</item>
+        <item>@drawable/old_house</item>
+        <item>@drawable/frosting_cafe</item>
+        <item>@drawable/good_vibes</item>
+        <item>@drawable/indra_cafe</item>
+    </array>
+
     <string-array name="restaurantName">
         <item>@string/onesta</item>
         <item>@string/hotel_mylari</item>
@@ -39,5 +51,37 @@
         <item>@string/indra_cafe</item>
     </string-array>
 
+    <string-array name="restaurantType">
+        <item>@string/italian</item>
+        <item>@string/indian</item>
+        <item>@string/chinese</item>
+        <item>@string/indian</item>
+        <item>@string/italian</item>
+        <item>@string/cafe</item>
+        <item>@string/italian</item>
+        <item>@string/indian</item>
+    </string-array>
+
+    <string-array name="restaurantPlace">
+        <item>@string/gokulam</item>
+        <item>@string/doora</item>
+        <item>@string/vijaynagar</item>
+        <item>@string/bannimantap</item>
+        <item>@string/chamrajpura</item>
+        <item>@string/gokulam</item>
+        <item>@string/chamrajpura</item>
+        <item>@string/chamrajpura</item>
+    </string-array>
+
+    <array name="restaurantRating">
+        <item>4.9</item>
+        <item>3.5</item>
+        <item>4.2</item>
+        <item>3.8</item>
+        <item>4.5</item>
+        <item>4.3</item>
+        <item>3.3</item>
+        <item>3.5</item>
+    </array>
 
 </resources>
