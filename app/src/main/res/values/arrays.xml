@@ -40,7 +40,7 @@
         <item>@drawable/indra_cafe</item>
     </array>
 
-    <string-array name="restaurantName">
+    <string-array name="restaurant_name">
         <item>@string/onesta</item>
         <item>@string/hotel_mylari</item>
         <item>@string/the_barge</item>
@@ -51,7 +51,7 @@
         <item>@string/indra_cafe</item>
     </string-array>
 
-    <string-array name="restaurantType">
+    <string-array name="restaurant_type">
         <item>@string/italian</item>
         <item>@string/indian</item>
         <item>@string/chinese</item>
@@ -62,7 +62,7 @@
         <item>@string/indian</item>
     </string-array>
 
-    <string-array name="restaurantPlace">
+    <string-array name="restaurant_place">
         <item>@string/gokulam</item>
         <item>@string/doora</item>
         <item>@string/vijaynagar</item>
@@ -73,7 +73,7 @@
         <item>@string/chamrajpura</item>
     </string-array>
 
-    <array name="restaurantRating">
+    <array name="restaurant_rating">
         <item>4.9</item>
         <item>3.5</item>
         <item>4.2</item>
@@ -84,4 +84,36 @@
         <item>3.5</item>
     </array>
 
+    <string-array name="shop_name">
+    <item>@string/mom</item>
+    <item>@string/bmhabitat</item>
+    <item>@string/garuda</item>
+    <item>@string/forum</item>
+    </string-array>
+
+    <string-array name="shop_place">
+        <item>@string/mom_place</item>
+        <item>@string/bmhabitat_place</item>
+        <item>@string/garuda_place</item>
+        <item>@string/forum_place</item>
+    </string-array>
+
+    <array name="shop_mainImgID">
+        <item>@drawable/mom</item>
+        <item>@drawable/bmhabitat</item>
+        <item>@drawable/garuda</item>
+        <item>@drawable/forum</item>
+    </array>
+
+    <array name="shop_rating">
+        <item>4.2</item>
+        <item>4.1</item>
+        <item>3.4</item>
+        <item>4.4</item>
+    </array>
+
+    <string name="mom_place">MG Road</string>
+    <string name="bmhabitat_place">Gokulam</string>
+    <string name="garuda_place">Albert Victor Road</string>
+    <string name="forum_place">Nazarbad</string>
 </resources>

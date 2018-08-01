@@ -2,7 +2,6 @@ package example.com.nammamysuru;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -16,7 +15,7 @@ class RestaurantData {
             mainImgId[index] = typedArray.getResourceId(index, 0);
         }
 
-        typedArray = context.getResources().obtainTypedArray(R.array.restaurantRating);
+        typedArray = context.getResources().obtainTypedArray(R.array.restaurant_rating);
         float[] rating = new float[typedArray.length()];
         for (int index = 0; index < rating.length; index++) {
             rating[index] = typedArray.getFloat(index, 0);
@@ -24,9 +23,9 @@ class RestaurantData {
 
         typedArray.recycle();
 
-        String[] title = context.getResources().getStringArray(R.array.restaurantName);
-        String[] type = context.getResources().getStringArray(R.array.restaurantType);
-        String[] place = context.getResources().getStringArray(R.array.restaurantPlace);
+        String[] title = context.getResources().getStringArray(R.array.restaurant_name);
+        String[] type = context.getResources().getStringArray(R.array.restaurant_type);
+        String[] place = context.getResources().getStringArray(R.array.restaurant_place);
 
         for (int i = 0; i < mainImgId.length; i++) {
             Restaurant restaurant = new Restaurant(title[i], mainImgId[i], type[i], rating[i], place[i]);

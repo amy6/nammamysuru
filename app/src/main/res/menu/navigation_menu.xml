@@ -9,7 +9,7 @@
         android:title="Restaurants"
         android:icon="@drawable/ic_restaurant"/>
 
-    <item android:id="@+id/shopping"
+    <item android:id="@+id/shop"
         android:title="Shopping"
         android:icon="@drawable/ic_shopping_basket"/>
 

@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.restaurant:
                         fragment = new RestaurantFragment();
                         break;
-                    case R.id.shopping:
+                    case R.id.shop:
+                        fragment = new ShopFragment();
                         break;
                     case R.id.commute:
                         break;
