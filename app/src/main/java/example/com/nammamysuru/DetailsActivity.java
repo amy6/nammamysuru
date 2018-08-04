@@ -11,6 +11,7 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_details);
 
         ButterKnife.bind(this);
@@ -18,8 +19,12 @@ public class DetailsActivity extends AppCompatActivity {
         /*Place place = (Place) getIntent().getSerializableExtra("Place");
         Fragment fragment = PlaceDetailFragment.newInstance(place);*/
 
-        Restaurant restaurant = (Restaurant) getIntent().getSerializableExtra("Restaurant");
-        Fragment fragment = RestaurantDetailFragment.newInstance(restaurant);
+        /*Restaurant restaurant = (Restaurant) getIntent().getSerializableExtra("Restaurant");
+        Fragment fragment = RestaurantDetailFragment.newInstance(restaurant);*/
+
+        Shop shop = (Shop) getIntent().getSerializableExtra("Shop");
+        Fragment fragment = ShopDetailFragment.newInstance(shop);
+
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
 

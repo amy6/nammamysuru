@@ -1,7 +1,9 @@
 package example.com.nammamysuru;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,12 +33,21 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ShopViewHolder holder, int position) {
-        Shop shop = shops.get(position);
+    public void onBindViewHolder(@NonNull final ShopViewHolder holder, int position) {
+        final Shop shop = shops.get(position);
         holder.image.setImageResource(shop.getImageId());
         holder.name.setText(shop.getName());
         holder.place.setText(shop.getPlace());
-        holder.rating.setText(String.valueOf(shop.getRating()));
+        holder.rating.setText(String.valueOf(shop.getRating()).concat("/5"));
+
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DetailsActivity.class);
+                intent.putExtra("Shop", shop);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -54,6 +65,8 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
         TextView rating;
         @BindView(R.id.place)
         TextView place;
+        @BindView(R.id.cardView)
+        CardView cardView;
 
         ShopViewHolder(@NonNull View itemView) {
             super(itemView);

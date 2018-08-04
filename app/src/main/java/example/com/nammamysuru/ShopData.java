@@ -26,9 +26,15 @@ public class ShopData {
 
         String[] title = context.getResources().getStringArray(R.array.shop_name);
         String[] place = context.getResources().getStringArray(R.array.shop_place);
+        String overview = context.getResources().getString(R.string.dummy_text);
+
+        String userName = context.getResources().getString(R.string.userName);
+        String userReview = context.getResources().getString(R.string.dummyReview);
+        float userRating = 4.2f;
 
         for (int i = 0; i < mainImgId.length; i++) {
-            Shop shop = new Shop(mainImgId[i], title[i], rating[i], place[i]);
+//            Shop shop = new Shop(mainImgId[i], title[i], rating[i], place[i]);
+            Shop shop = new Shop(mainImgId[i], title[i], rating[i], place[i], overview, userName, userReview, userRating, 147);
             shopPlaces.add(shop);
         }
 

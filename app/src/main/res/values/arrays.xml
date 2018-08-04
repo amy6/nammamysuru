@@ -99,10 +99,10 @@
     </string-array>
 
     <array name="shop_mainImgID">
-        <item>@drawable/mom</item>
-        <item>@drawable/bmhabitat</item>
-        <item>@drawable/garuda</item>
-        <item>@drawable/forum</item>
+        <item>@drawable/mysore_mall</item>
+        <item>@drawable/bmhabitat_mall</item>
+        <item>@drawable/garuda_mall</item>
+        <item>@drawable/forum_mall</item>
     </array>
 
     <array name="shop_rating">
