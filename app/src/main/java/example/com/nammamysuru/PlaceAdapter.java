@@ -22,6 +22,8 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static example.com.nammamysuru.DetailsActivity.INTENT_EXTRA;
+
 public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlacesViewHolder> {
 
     private ArrayList<Place> places;
@@ -54,7 +56,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlacesViewHo
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailsActivity.class);
-                intent.putExtra("Place", place);
+                intent.putExtra(INTENT_EXTRA, place);
                 ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((MainActivity) context, holder.overlayImg, ViewCompat.getTransitionName(holder.overlayImg));
                 context.startActivity(intent, options.toBundle());
             }

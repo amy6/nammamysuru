@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import static example.com.nammamysuru.DetailsActivity.INTENT_EXTRA;
+
 public class PlaceDetailFragment extends Fragment {
 
     private Place place;
@@ -17,7 +19,7 @@ public class PlaceDetailFragment extends Fragment {
     public static PlaceDetailFragment newInstance(Place place) {
         PlaceDetailFragment fragment = new PlaceDetailFragment();
         Bundle args = new Bundle();
-        args.putSerializable("Place", place);
+        args.putSerializable(INTENT_EXTRA, place);
         fragment.setArguments(args);
         return fragment;
     }
@@ -26,7 +28,7 @@ public class PlaceDetailFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            Place place = (Place) getArguments().getSerializable("Place");
+            Place place = (Place) getArguments().getSerializable(INTENT_EXTRA);
             if (place != null) {
                 this.place = place;
             }

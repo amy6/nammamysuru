@@ -19,6 +19,8 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static example.com.nammamysuru.DetailsActivity.INTENT_EXTRA;
+
 public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder> {
 
     private Context context;
@@ -49,7 +51,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailsActivity.class);
-                intent.putExtra("Restaurant", restaurant);
+                intent.putExtra(INTENT_EXTRA, restaurant);
                 ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((MainActivity) context, holder.restaurantImg, ViewCompat.getTransitionName(holder.restaurantImg));
                 context.startActivity(intent, options.toBundle());
             }

@@ -8,25 +8,27 @@ import butterknife.ButterKnife;
 
 public class DetailsActivity extends AppCompatActivity {
 
+    public static final String INTENT_EXTRA = "extra";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
         setContentView(R.layout.activity_details);
 
         ButterKnife.bind(this);
 
-        /*Place place = (Place) getIntent().getSerializableExtra("Place");
-        Fragment fragment = PlaceDetailFragment.newInstance(place);*/
-
-        /*Restaurant restaurant = (Restaurant) getIntent().getSerializableExtra("Restaurant");
-        Fragment fragment = RestaurantDetailFragment.newInstance(restaurant);*/
-
-        Shop shop = (Shop) getIntent().getSerializableExtra("Shop");
-        Fragment fragment = ShopDetailFragment.newInstance(shop);
-
-
+        Object object = getIntent().getSerializableExtra(INTENT_EXTRA);
+        Fragment fragment = null;
+        if (object instanceof Place) {
+            fragment = PlaceDetailFragment.newInstance((Place) object);
+        } else if (object instanceof  Restaurant) {
+            fragment = RestaurantDetailFragment.newInstance((Restaurant) object);
+        } else if (object instanceof Shop) {
+            fragment = ShopDetailFragment.newInstance((Shop) object);
+        }
+//        else if (object instanceof Bus) {
+//            fragment = BusDetailFragment.newInstance((Bus) object);
+//        }
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
-
     }
 }

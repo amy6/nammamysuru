@@ -3,6 +3,7 @@ package example.com.nammamysuru;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -12,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import static example.com.nammamysuru.DetailsActivity.INTENT_EXTRA;
+
 public class ShopDetailFragment extends Fragment {
 
     private Shop shop;
@@ -19,7 +22,7 @@ public class ShopDetailFragment extends Fragment {
     public static ShopDetailFragment newInstance(Shop shop) {
         ShopDetailFragment fragment = new ShopDetailFragment();
         Bundle args = new Bundle();
-        args.putSerializable("Shop", shop);
+        args.putSerializable(INTENT_EXTRA, shop);
         fragment.setArguments(args);
         return fragment;
     }
@@ -27,9 +30,9 @@ public class ShopDetailFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
+        ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
         if (getArguments() != null) {
-            Shop shop = (Shop) getArguments().getSerializable("Shop");
+            Shop shop = (Shop) getArguments().getSerializable(INTENT_EXTRA);
             if (shop != null) {
                 this.shop = shop;
             }
@@ -49,11 +52,13 @@ public class ShopDetailFragment extends Fragment {
         TextView title =  view.findViewById(R.id.name);
         TextView desc =  view.findViewById(R.id.desc);
         RatingBar ratingBar = view.findViewById(R.id.ratingBar);
+        CollapsingToolbarLayout collapsingToolbarLayout = view.findViewById(R.id.collapsingToolbar);
 
         TextView userName = view.findViewById(R.id.user_name);
         RatingBar userRating = view.findViewById(R.id.user_rating);
         TextView userReview = view.findViewById(R.id.user_review);
 
+        collapsingToolbarLayout.setTitle("Add some title");
         mainImg.setImageResource(shop.getImageId());
         title.setText(shop.getName());
         desc.setText(shop.getOverview());
@@ -67,6 +72,6 @@ public class ShopDetailFragment extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
-//        ((AppCompatActivity)getActivity()).getSupportActionBar().show();
+        ((AppCompatActivity)getActivity()).getSupportActionBar().show();
     }
 }

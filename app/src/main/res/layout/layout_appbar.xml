@@ -8,13 +8,11 @@
     android:fitsSystemWindows="true">
 
     <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/collapsingToolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         app:contentScrim="@color/colorPrimary"
-        app:title="@string/app_name"
-        app:expandedTitleMarginStart="48dp"
-        app:expandedTitleMarginEnd="64dp"
         app:collapsedTitleGravity="top"
         app:layout_scrollFlags="scroll|exitUntilCollapsed">
 

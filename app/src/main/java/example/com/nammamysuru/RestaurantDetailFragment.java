@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import static example.com.nammamysuru.DetailsActivity.INTENT_EXTRA;
+
 public class RestaurantDetailFragment extends Fragment {
 
     private Restaurant restaurant;
@@ -18,7 +20,7 @@ public class RestaurantDetailFragment extends Fragment {
     public static RestaurantDetailFragment newInstance(Restaurant restaurant) {
         RestaurantDetailFragment fragment = new RestaurantDetailFragment();
         Bundle args = new Bundle();
-        args.putSerializable("Restaurant", restaurant);
+        args.putSerializable(INTENT_EXTRA, restaurant);
         fragment.setArguments(args);
         return fragment;
     }
@@ -27,7 +29,7 @@ public class RestaurantDetailFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            Restaurant restaurant = (Restaurant) getArguments().getSerializable("Restaurant");
+            Restaurant restaurant = (Restaurant) getArguments().getSerializable(INTENT_EXTRA);
             if (restaurant != null) {
                 this.restaurant = restaurant;
             }

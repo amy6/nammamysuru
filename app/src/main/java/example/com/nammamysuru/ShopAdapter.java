@@ -16,6 +16,8 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+import static example.com.nammamysuru.DetailsActivity.INTENT_EXTRA;
+
 public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder> {
 
     private Context context;
@@ -44,7 +46,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailsActivity.class);
-                intent.putExtra("Shop", shop);
+                intent.putExtra(INTENT_EXTRA, shop);
                 context.startActivity(intent);
             }
         });
