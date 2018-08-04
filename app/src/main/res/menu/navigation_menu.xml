@@ -13,8 +13,8 @@
         android:title="Shopping"
         android:icon="@drawable/ic_shopping_basket"/>
 
-    <item android:id="@+id/commute"
-        android:title="Commute"
-        android:icon="@drawable/ic_directions_bus"/>
+    <item android:id="@+id/event"
+        android:title="Events"
+        android:icon="@drawable/ic_event"/>
 
 </menu>

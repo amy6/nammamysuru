@@ -112,8 +112,45 @@
         <item>4.4</item>
     </array>
 
-    <string name="mom_place">MG Road</string>
-    <string name="bmhabitat_place">Gokulam</string>
-    <string name="garuda_place">Albert Victor Road</string>
-    <string name="forum_place">Nazarbad</string>
+    <string-array name="event_name">
+        <item>@string/navikotsava</item>
+        <item>@string/live_music</item>
+        <item>@string/pratigam</item>
+        <item>@string/janmashtami</item>
+        <item>@string/marathon</item>
+    </string-array>
+
+    <string-array name="event_place">
+        <item>@string/navikotsava_place</item>
+        <item>@string/live_music_place</item>
+        <item>@string/pratigam_place</item>
+        <item>@string/janmashtami_place</item>
+        <item>@string/marathon_place</item>
+    </string-array>
+
+    <string-array name="event_date">
+        <item>@string/navikotsava_date</item>
+        <item>@string/live_music_date</item>
+        <item>@string/pratigam_date</item>
+        <item>@string/janmashtami_date</item>
+        <item>@string/marathon_date</item>
+    </string-array>
+
+    <string-array name="event_time">
+        <item>@string/navikotsava_time</item>
+        <item>@string/live_music_time</item>
+        <item>@string/pratigam_time</item>
+        <item>@string/janmashtami_time</item>
+        <item>@string/marathon_time</item>
+    </string-array>
+
+    <string-array name="event_url">
+        <item>@string/navikotsava_url</item>
+        <item>@string/live_music_url</item>
+        <item>@string/pratigam_url</item>
+        <item>@string/janmashtami_url</item>
+        <item>@string/marathon_url</item>
+    </string-array>
+
+
 </resources>

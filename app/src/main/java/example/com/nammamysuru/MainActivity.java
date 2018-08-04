@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.shop:
                         fragment = new ShopFragment();
                         break;
-                    case R.id.commute:
+                    case R.id.event:
+                        fragment = new EventFragment();
                         break;
                 }
                 fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
