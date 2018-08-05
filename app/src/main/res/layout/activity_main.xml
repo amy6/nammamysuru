@@ -16,7 +16,7 @@
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bnv"
         android:layout_width="match_parent"
-        android:layout_height="57dp"
+        android:layout_height="@dimen/bnv_height"
         android:background="@android:color/white"
         app:menu="@menu/navigation_menu" />
 

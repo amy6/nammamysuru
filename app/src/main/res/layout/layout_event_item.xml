@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:padding="@dimen/dimens_8dp">
 
 
     <TextView
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:background="?selectableItemBackground"
-            android:text="More Details"
+            android:text="@string/more_details"
             android:textColor="@color/colorPrimary" />
 
     </LinearLayout>

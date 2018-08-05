@@ -6,83 +6,83 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <include layout="@layout/layout_appbar"/>
+    <include layout="@layout/layout_appbar" />
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:nestedScrollingEnabled="false"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimens_16dp"
+                android:drawableEnd="@drawable/ic_map"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/black"
+                tools:text="Mall of Mysore" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimens_8dp"
+                android:stepSize="0.1"
+                tools:rating="4.3" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens_2dp"
+                android:layout_margin="@dimen/dimens_8dp"
+                android:background="@color/colorPrimary" />
+
+
+            <TextView
+                android:id="@+id/overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimens_8dp"
+                android:text="@string/overview"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimens_16dp"
+                android:text="@string/dummy_text" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="@dimen/dimens_8dp"
+                android:background="@color/colorPrimary" />
 
             <LinearLayout
-                android:id="@+id/linear"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:orientation="vertical"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                android:nestedScrollingEnabled="false">
-
-
-                <TextView
-                    android:id="@+id/name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:drawableEnd="@drawable/ic_map"
-                    android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@android:color/black"
-                    tools:text="Mall of Mysore" />
-
-                <RatingBar
-                    android:id="@+id/ratingBar"
-                    style="?android:ratingBarStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:stepSize="0.1"
-                    tools:rating="4.3" />
-
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_margin="8dp"
-                    android:background="@color/colorPrimary"/>
-
-
-                <TextView
-                    android:id="@+id/overview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:text="Overview"
-                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
-                    android:textColor="@android:color/black"/>
-
-                <TextView
-                    android:id="@+id/desc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:text="@string/dummy_text"/>
-
-                <View
-                    android:id="@+id/view2"
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_margin="8dp"
-                    android:background="@color/colorPrimary"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/user_name"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_margin="@dimen/dimens_16dp"
                     android:layout_weight="1"
                     android:textAppearance="@android:style/TextAppearance.Material.Medium"
                     android:textColor="@android:color/black"
@@ -93,26 +93,26 @@
                     style="?android:ratingBarStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
+                    android:layout_margin="@dimen/dimens_8dp"
                     tools:rating="4.2" />
 
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/user_review"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    tools:text="@string/dummy_text" />
-
-                <TextView
-                    android:id="@+id/totalRatings"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:textColor="@color/colorAccent"
-                    android:textStyle="bold"/>
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/user_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimens_16dp"
+                tools:text="@string/dummy_text" />
+
+            <TextView
+                android:id="@+id/totalRatings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimens_8dp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
+        </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
 
