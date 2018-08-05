@@ -19,7 +19,7 @@ import example.com.nammamysuru.utils.Utils;
 
 import static example.com.nammamysuru.activity.DetailsActivity.INTENT_EXTRA;
 
-public class ShopDetailFragment extends Fragment {
+public class ShopDetailFragment extends Fragment implements View.OnClickListener {
 
     private Shop shop;
 
@@ -73,7 +73,7 @@ public class ShopDetailFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ImageView mainImg = view.findViewById(R.id.image);
-        TextView title =  view.findViewById(R.id.name);
+        TextView address =  view.findViewById(R.id.address);
         TextView desc =  view.findViewById(R.id.desc);
         RatingBar ratingBar = view.findViewById(R.id.ratingBar);
         TextView totalRatings = view.findViewById(R.id.totalRatings);
@@ -88,7 +88,8 @@ public class ShopDetailFragment extends Fragment {
 
         collapsingToolbarLayout.setTitle(shop.getName());
         mainImg.setImageResource(shop.getImageId());
-        title.setText(shop.getName());
+        address.setText(shop.getAddress());
+        address.setOnClickListener(this);
         desc.setText(shop.getOverview());
         ratingBar.setRating(shop.getRating());
         totalRatings.setText(String.format(getString(R.string.totalRatings), shop.getTotalRatings()));
@@ -96,5 +97,12 @@ public class ShopDetailFragment extends Fragment {
         userName.setText(shop.getSampleReviewUsername());
         userReview.setText(shop.getSampleReview());
         userRating.setRating(shop.getSampleReviewUserRating());
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (getContext() != null) {
+            Utils.directionsIntent(getContext(), shop.getLocation());
+        }
     }
 }

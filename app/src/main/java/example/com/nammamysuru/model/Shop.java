@@ -9,17 +9,21 @@ public class Shop implements Serializable{
     private float rating;
     private String place;
     private String overview;
+    private String address;
+    private String location;
     private String sampleReviewUsername;
     private String sampleReview;
     private float sampleReviewUserRating;
     private int totalRatings;
 
-    public Shop(int imageId, String name, float rating, String place, String overview, String sampleReviewUsername, String sampleReview, float sampleReviewUserRating, int totalRatings) {
+    public Shop(int imageId, String name, float rating, String place, String overview, String address, String location, String sampleReviewUsername, String sampleReview, float sampleReviewUserRating, int totalRatings) {
         this.imageId = imageId;
         this.name = name;
         this.rating = rating;
         this.place = place;
         this.overview = overview;
+        this.address = address;
+        this.location = location;
         this.sampleReviewUsername = sampleReviewUsername;
         this.sampleReview = sampleReview;
         this.sampleReviewUserRating = sampleReviewUserRating;
@@ -60,5 +64,13 @@ public class Shop implements Serializable{
 
     public int getTotalRatings() {
         return totalRatings;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getLocation() {
+        return location;
     }
 }

@@ -85,7 +85,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
 
         @BindView(R.id.mainImage)
         ImageView image;
-        @BindView(R.id.name)
+        @BindView(R.id.address)
         TextView name;
         @BindView(R.id.rating)
         TextView rating;

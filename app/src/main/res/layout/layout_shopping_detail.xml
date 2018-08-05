@@ -25,14 +25,13 @@
 
 
             <TextView
-                android:id="@+id/name"
+                android:id="@+id/address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dimens_16dp"
+                android:layout_margin="@dimen/dimens_8dp"
                 android:drawableEnd="@drawable/ic_map"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="@android:color/black"
-                tools:text="Mall of Mysore" />
+                android:background="?selectableItemBackground"
+                tools:text="MG Road" />
 
             <RatingBar
                 android:id="@+id/ratingBar"

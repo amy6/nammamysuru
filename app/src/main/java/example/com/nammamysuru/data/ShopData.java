@@ -42,6 +42,8 @@ public class ShopData {
 
         String[] title = resources.getStringArray(R.array.shop_name);
         String[] place = resources.getStringArray(R.array.shop_place);
+        String[] address = resources.getStringArray(R.array.shop_address);
+        String[] location = resources.getStringArray(R.array.shop_location);
         String overview = resources.getString(R.string.dummy_text);
 
         String userName = resources.getString(R.string.userName);
@@ -49,7 +51,7 @@ public class ShopData {
         float userRating = 4.2f;
 
         for (int i = 0; i < mainImgId.length; i++) {
-            Shop shop = new Shop(mainImgId[i], title[i], rating[i], place[i], overview, userName, userReview, userRating, totalRatings[i]);
+            Shop shop = new Shop(mainImgId[i], title[i], rating[i], place[i], overview, address[i], location[i], userName, userReview, userRating, totalRatings[i]);
             shopPlaces.add(shop);
         }
 

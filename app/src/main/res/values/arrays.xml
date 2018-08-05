@@ -144,6 +144,24 @@
         <item>@string/ksic</item>
     </string-array>
 
+    <string-array name="shop_address">
+        <item>@string/mom_address</item>
+        <item>@string/bmhabitat_address</item>
+        <item>@string/garuda_address</item>
+        <item>@string/forum_address</item>
+        <item>@string/badsha_address</item>
+        <item>@string/ksic_address</item>
+    </string-array>
+
+    <string-array name="shop_location">
+        <item>@string/mom_location</item>
+        <item>@string/bmhabitat_location</item>
+        <item>@string/garuda_location</item>
+        <item>@string/forum_location</item>
+        <item>@string/badsha_location</item>
+        <item>@string/ksic_location</item>
+    </string-array>
+
     <string-array name="shop_place">
         <item>@string/mom_place</item>
         <item>@string/bmhabitat_place</item>
