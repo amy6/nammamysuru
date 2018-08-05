@@ -1,10 +1,7 @@
 package example.com.nammamysuru.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -19,11 +16,8 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import example.com.nammamysuru.R;
-import example.com.nammamysuru.activity.DetailsActivity;
-import example.com.nammamysuru.activity.MainActivity;
 import example.com.nammamysuru.model.Restaurant;
-
-import static example.com.nammamysuru.activity.DetailsActivity.INTENT_EXTRA;
+import example.com.nammamysuru.utils.Utils;
 
 public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder> {
 
@@ -68,10 +62,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, DetailsActivity.class);
-                intent.putExtra(INTENT_EXTRA, restaurant);
-                ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((MainActivity) context, holder.restaurantImg, ViewCompat.getTransitionName(holder.restaurantImg));
-                context.startActivity(intent, options.toBundle());
+                Utils.fireIntent(context, restaurant, holder.restaurantImg);
             }
         });
     }

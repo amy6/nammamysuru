@@ -1,13 +1,10 @@
 package example.com.nammamysuru.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
-import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,12 +17,8 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import example.com.nammamysuru.R;
-import example.com.nammamysuru.utils.Utils;
-import example.com.nammamysuru.activity.DetailsActivity;
-import example.com.nammamysuru.activity.MainActivity;
 import example.com.nammamysuru.model.Place;
-
-import static example.com.nammamysuru.activity.DetailsActivity.INTENT_EXTRA;
+import example.com.nammamysuru.utils.Utils;
 
 public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlacesViewHolder> {
 
@@ -70,10 +63,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlacesViewHo
         holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, DetailsActivity.class);
-                intent.putExtra(INTENT_EXTRA, place);
-                ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((MainActivity) context, holder.overlayImg, ViewCompat.getTransitionName(holder.overlayImg));
-                context.startActivity(intent, options.toBundle());
+                Utils.fireIntent(context, place, holder.overlayImg);
             }
         });
     }

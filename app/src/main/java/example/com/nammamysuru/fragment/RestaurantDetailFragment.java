@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 import example.com.nammamysuru.R;
 import example.com.nammamysuru.model.Restaurant;
 import example.com.nammamysuru.utils.Utils;
@@ -76,6 +79,7 @@ public class RestaurantDetailFragment extends Fragment implements View.OnClickLi
         TextView type =  view.findViewById(R.id.type);
         TextView desc =  view.findViewById(R.id.desc);
         TextView rating = view.findViewById(R.id.rating);
+        TextView reviewcount = view.findViewById(R.id.reviewCount);
         RatingBar ratingBar = view.findViewById(R.id.ratingBar);
         TextView directions = view.findViewById(R.id.directions);
         TextView call = view.findViewById(R.id.call);
@@ -93,6 +97,8 @@ public class RestaurantDetailFragment extends Fragment implements View.OnClickLi
         type.setText(restaurant.getType());
         desc.setText(R.string.dummy_text);
         rating.setText(String.valueOf(restaurant.getRating()));
+        String numberFormat = NumberFormat.getNumberInstance().format(restaurant.getReviewCount());
+        reviewcount.setText(String.format(getString(R.string.reviewCount) , numberFormat));
         ratingBar.setRating(restaurant.getRating());
     }
 

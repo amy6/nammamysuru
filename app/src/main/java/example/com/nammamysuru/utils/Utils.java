@@ -10,13 +10,23 @@ import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 import android.support.annotation.RequiresApi;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import example.com.nammamysuru.R;
+import example.com.nammamysuru.activity.DetailsActivity;
+import example.com.nammamysuru.activity.MainActivity;
+import example.com.nammamysuru.model.Place;
+import example.com.nammamysuru.model.Restaurant;
+import example.com.nammamysuru.model.Shop;
+
+import static example.com.nammamysuru.activity.DetailsActivity.INTENT_EXTRA;
 
 public class Utils {
 
@@ -60,6 +70,22 @@ public class Utils {
             }
 
         }
+    }
+
+    public static void fireIntent(Context context, Object object, ImageView image) {
+        Intent intent = new Intent(context, DetailsActivity.class);
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((MainActivity) context, image, ViewCompat.getTransitionName(image));
+        if (object instanceof Place) {
+            Place place = (Place) object;
+            intent.putExtra(INTENT_EXTRA, place);
+        } else if (object instanceof Restaurant) {
+            Restaurant restaurant = (Restaurant) object;
+            intent.putExtra(INTENT_EXTRA, restaurant);
+        } else if (object instanceof Shop) {
+            Shop shop = (Shop) object;
+            intent.putExtra(INTENT_EXTRA, shop);
+        }
+        context.startActivity(intent, options.toBundle());
     }
 
     public static void directionsIntent(Context context, String location) {

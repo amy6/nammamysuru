@@ -20,7 +20,7 @@
             android:layout_height="@dimen/dimens_180dp"
             android:contentDescription="@string/no_desc_available"
             android:scaleType="centerCrop"
-            android:transitionName="image"
+            android:transitionName="@string/image"
             tools:src="@tools:sample/avatars" />
 
         <android.support.v7.widget.CardView

@@ -30,6 +30,12 @@ public class RestaurantData {
             rating[index] = typedArray.getFloat(index, 0);
         }
 
+        typedArray = resources.obtainTypedArray(R.array.restaurant_review_count);
+        int[] reviewCount = new int[typedArray.length()];
+        for (int index = 0; index < reviewCount.length; index++) {
+            reviewCount[index] = typedArray.getInt(index, 0);
+        }
+
         typedArray.recycle();
 
         String[] title = resources.getStringArray(R.array.restaurant_name);
@@ -40,7 +46,7 @@ public class RestaurantData {
         String[] website = resources.getStringArray(R.array.restaurant_website);
 
         for (int i = 0; i < mainImgId.length; i++) {
-            Restaurant restaurant = new Restaurant(title[i], mainImgId[i], type[i], rating[i], place[i], location[i], phone[i], website[i]);
+            Restaurant restaurant = new Restaurant(title[i], mainImgId[i], type[i], rating[i], reviewCount[i], place[i], location[i], phone[i], website[i]);
             restaurants.add(restaurant);
         }
 

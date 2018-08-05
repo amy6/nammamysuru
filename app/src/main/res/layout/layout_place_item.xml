@@ -17,7 +17,7 @@
         android:layout_marginStart="@dimen/dimens_8dp"
         android:layout_marginTop="@dimen/dimens_8dp"
         android:elevation="@dimen/dimens_4dp"
-        android:transitionName="image"
+        android:transitionName="@string/image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

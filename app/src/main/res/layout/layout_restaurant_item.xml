@@ -18,7 +18,7 @@
             android:layout_height="@dimen/dimens_180dp"
             android:contentDescription="@string/no_desc_available"
             android:scaleType="centerCrop"
-            android:transitionName="restaurantImg"
+            android:transitionName="@string/image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

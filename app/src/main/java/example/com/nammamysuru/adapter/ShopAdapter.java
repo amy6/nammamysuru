@@ -1,7 +1,6 @@
 package example.com.nammamysuru.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -16,10 +15,8 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import example.com.nammamysuru.R;
-import example.com.nammamysuru.activity.DetailsActivity;
 import example.com.nammamysuru.model.Shop;
-
-import static example.com.nammamysuru.activity.DetailsActivity.INTENT_EXTRA;
+import example.com.nammamysuru.utils.Utils;
 
 public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder> {
 
@@ -63,9 +60,7 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, DetailsActivity.class);
-                intent.putExtra(INTENT_EXTRA, shop);
-                context.startActivity(intent);
+                Utils.fireIntent(context, shop, holder.image);
             }
         });
     }

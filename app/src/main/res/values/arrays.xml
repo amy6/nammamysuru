@@ -102,6 +102,17 @@
         <item>3.5</item>
     </array>
 
+    <array name="restaurant_review_count">
+        <item>1432</item>
+        <item>343</item>
+        <item>2324</item>
+        <item>132</item>
+        <item>57</item>
+        <item>453</item>
+        <item>122</item>
+        <item>1163</item>
+    </array>
+
     <string-array name="restaurant_location">
         <item>@string/onesta_location</item>
         <item>@string/hotel_mylari_location</item>

@@ -24,6 +24,7 @@
             android:contentDescription="@string/no_desc_available"
             android:fitsSystemWindows="true"
             android:scaleType="fitXY"
+            android:transitionName="@string/image"
             app:layout_collapseMode="parallax"
             tools:src="@tools:sample/avatars" />
 
