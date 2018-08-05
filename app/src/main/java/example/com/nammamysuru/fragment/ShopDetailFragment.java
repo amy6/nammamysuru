@@ -5,7 +5,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +15,7 @@ import android.widget.TextView;
 
 import example.com.nammamysuru.R;
 import example.com.nammamysuru.model.Shop;
+import example.com.nammamysuru.utils.Utils;
 
 import static example.com.nammamysuru.activity.DetailsActivity.INTENT_EXTRA;
 
@@ -23,6 +23,11 @@ public class ShopDetailFragment extends Fragment {
 
     private Shop shop;
 
+    /**
+     * initialize a new fragment
+     * @param shop shop object to be used to display the details
+     * @return detail fragment instance
+     */
     public static ShopDetailFragment newInstance(Shop shop) {
         ShopDetailFragment fragment = new ShopDetailFragment();
         Bundle args = new Bundle();
@@ -31,10 +36,13 @@ public class ShopDetailFragment extends Fragment {
         return fragment;
     }
 
+    /**
+     * code for view initialization or restoring fragment's state
+     * @param savedInstanceState bundle object reference to restore fragment's state
+     */
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
         if (getArguments() != null) {
             Shop shop = (Shop) getArguments().getSerializable(INTENT_EXTRA);
             if (shop != null) {
@@ -43,12 +51,24 @@ public class ShopDetailFragment extends Fragment {
         }
     }
 
+    /**
+     * define inflation logic
+     * @param inflater inflater object to inflate new layout
+     * @param container viewgroup to which the new layout is to be attached
+     * @param savedInstanceState reference to savedInstanceState using which saved fragment state can be restored
+     * @return newly inflated view
+     */
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.layout_shopping_detail, container, false);
     }
 
+    /**
+     * access views that have been initialized in the fragment UI
+     * @param view reference to fragment view
+     * @param savedInstanceState reference to savedInstanceState using which saved fragment state can be restored
+     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -56,13 +76,11 @@ public class ShopDetailFragment extends Fragment {
         TextView title =  view.findViewById(R.id.name);
         TextView desc =  view.findViewById(R.id.desc);
         RatingBar ratingBar = view.findViewById(R.id.ratingBar);
+        TextView totalRatings = view.findViewById(R.id.totalRatings);
         CollapsingToolbarLayout collapsingToolbarLayout = view.findViewById(R.id.collapsingToolbar);
         Toolbar toolbar = view.findViewById(R.id.toolbar);
 
-        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        Utils.setUpToolbar(getActivity(), toolbar, shop.getName());
 
         TextView userName = view.findViewById(R.id.user_name);
         RatingBar userRating = view.findViewById(R.id.user_rating);
@@ -73,15 +91,10 @@ public class ShopDetailFragment extends Fragment {
         title.setText(shop.getName());
         desc.setText(shop.getOverview());
         ratingBar.setRating(shop.getRating());
+        totalRatings.setText(String.format(getString(R.string.totalRatings), shop.getTotalRatings()));
 
         userName.setText(shop.getSampleReviewUsername());
         userReview.setText(shop.getSampleReview());
         userRating.setRating(shop.getSampleReviewUserRating());
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-//        ((AppCompatActivity)getActivity()).getSupportActionBar().show();
     }
 }

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Namma Mysuru</string>
+    <string name="places">Places</string>
 
     <string name="mysore_palace">Mysore Palace</string>
     <string name="venugopalaswamy_temple">Venugopalaswamy Temple</string>
@@ -7,6 +8,13 @@
     <string name="krs">Krishna Raja Sagara</string>
     <string name="bylakuppe">Bylakuppe</string>
     <string name="ranganthittu">Ranganthittu Bird Sanctuary</string>
+
+    <string name="mysore_palace_hours">10:00 am - 05:30 pm</string>
+    <string name="venugopalaswamy_temple_hours">08:30 am - 04:30 pm</string>
+    <string name="grs_hours">10:30 am - 07:00 pm</string>
+    <string name="krs_hours">06:30 am - 07:30 pm</string>
+    <string name="bylakuppe_hours">09:00 am - 06:00 pm</string>
+    <string name="ranganthittu_hours">09:00 am - 06:00 pm</string>
 
     <string name="la_uppu">La Uppu</string>
     <string name="the_barge">The Barge</string>
@@ -39,6 +47,7 @@
     <string name="forum_place">Nazarbad</string>
 
     <string name="userName">Aadhya Agarwal</string>
+    <string name="totalRatings">Read %1$d reviews.</string>
     
     <string name="navikotsava">Navikotsava</string>
     <string name="live_music">Live Music: Between green &amp; me</string>
@@ -58,11 +67,11 @@
     <string name="janmashtami_date">3rd Sept</string>
     <string name="marathon_date">9th Sept</string>
 
-    <string name="navikotsava_time">10:30am</string>
-    <string name="live_music_time">7:00pm - 10:30pm</string>
-    <string name="pratigam_time">4:00pm - 9:00pm</string>
-    <string name="janmashtami_time">7:00am - 12:45pm</string>
-    <string name="marathon_time">5:30am</string>
+    <string name="navikotsava_time">10:30 am</string>
+    <string name="live_music_time">7:00 pm - 10:30 pm</string>
+    <string name="pratigam_time">4:00 pm - 9:00 pm</string>
+    <string name="janmashtami_time">7:00 am - 12:45 pm</string>
+    <string name="marathon_time">5:30 am</string>
 
     <string name="navikotsava_url">http://www.masthmysore.com/events/navikotsava-2018/</string>
     <string name="live_music_url">http://www.masthmysore.com/events/live-music-green/</string>
@@ -73,5 +82,8 @@
     <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Montes nascetur ridiculus mus mauris. Venenatis tellus in metus vulputate eu scelerisque. Urna duis convallis convallis tellus id interdum.\n\nSagittis id consectetur purus ut faucibus pulvinar elementum integer. Eu mi bibendum neque egestas congue quisque egestas diam. Facilisi cras fermentum odio eu feugiat pretium. Sed tempus urna et pharetra pharetra massa. Semper quis lectus nulla at volutpat diam ut venenatis tellus. Mauris pharetra et ultrices neque ornare aenean.</string>
 
     <string name="dummyReview">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="shopping">Shopping</string>
+    <string name="events">Events</string>
 
 </resources>

@@ -23,17 +23,29 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
     private Context context;
     private ArrayList<Event> events;
 
+    //constructor to initialize the adapter
     public EventAdapter(Context context, ArrayList<Event> events) {
         this.context = context;
         this.events = events;
     }
 
+    /**
+     * define inflation logic
+     * @param parent viewgroup to which the inflated view will be attached to
+     * @param viewType view type of the new view
+     * @return newly inflated view
+     */
     @NonNull
     @Override
     public EventViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new EventViewHolder(LayoutInflater.from(context).inflate(R.layout.layout_event_item, parent, false));
     }
 
+    /**
+     * define binding views and modify them as required
+     * @param holder holder to fetch references to views and modify them
+     * @param position position of the current view being modified
+     */
     @Override
     public void onBindViewHolder(@NonNull EventViewHolder holder, int position) {
         final Event event = events.get(position);
@@ -50,12 +62,17 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
         });
     }
 
+    /**
+     * get the total number of items to be displayed in the recyclerview
+     * @return count of items ]
+     */
     @Override
     public int getItemCount() {
         return events.size();
     }
 
 
+    //ViewHolder design pattern to help reduce the number of calls to findViewById
     class EventViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.event_name)

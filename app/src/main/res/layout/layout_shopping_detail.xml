@@ -106,11 +106,10 @@
                     tools:text="@string/dummy_text" />
 
                 <TextView
-                    android:id="@+id/read_reviews"
+                    android:id="@+id/totalRatings"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:text="Read 104 reviews"
                     android:textColor="@color/colorAccent"
                     android:textStyle="bold"/>
             </LinearLayout>

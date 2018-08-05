@@ -7,11 +7,13 @@ public class Place implements Serializable{
     private String title;
     private int mainImgId;
     private int overlayImgId;
+    private String openHours;
 
-    public Place(String title, int mainImgId, int overlayImgId) {
+    public Place(String title, int mainImgId, int overlayImgId, String openHours) {
         this.title = title;
         this.mainImgId = mainImgId;
         this.overlayImgId = overlayImgId;
+        this.openHours = openHours;
     }
 
     public String getTitle() {
@@ -24,5 +26,9 @@ public class Place implements Serializable{
 
     public int getOverlayImgId() {
         return overlayImgId;
+    }
+
+    public String getOpenHours() {
+        return openHours;
     }
 }

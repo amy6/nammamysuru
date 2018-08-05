@@ -2,11 +2,11 @@ package example.com.nammamysuru.model;
 
 public class Event {
 
-    String name;
-    String place;
-    String time;
-    String date;
-    String url;
+    private String name;
+    private String place;
+    private String time;
+    private String date;
+    private String url;
 
     public Event(String name, String place, String time, String date, String url) {
         this.name = name;

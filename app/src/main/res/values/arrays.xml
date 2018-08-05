@@ -28,6 +28,15 @@
         <item>@string/ranganthittu</item>
     </string-array>
 
+    <string-array name="placeHours">
+        <item>@string/mysore_palace_hours</item>
+        <item>@string/venugopalaswamy_temple_hours</item>
+        <item>@string/grs_hours</item>
+        <item>@string/krs_hours</item>
+        <item>@string/bylakuppe_hours</item>
+        <item>@string/ranganthittu_hours</item>
+    </string-array>
+
 
     <array name="restaurant_mainImgID">
         <item>@drawable/onesta</item>
@@ -112,6 +121,13 @@
         <item>4.4</item>
     </array>
 
+    <array name="shop_total_ratings">
+        <item>147</item>
+        <item>453</item>
+        <item>78</item>
+        <item>356</item>
+    </array>
+
     <string-array name="event_name">
         <item>@string/navikotsava</item>
         <item>@string/live_music</item>
@@ -151,6 +167,5 @@
         <item>@string/janmashtami_url</item>
         <item>@string/marathon_url</item>
     </string-array>
-
 
 </resources>

@@ -26,17 +26,31 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
     private Context context;
     private ArrayList<Shop> shops;
 
+    //constructor to initialize the adapter
     public ShopAdapter(Context context, ArrayList<Shop> shops) {
         this.context = context;
         this.shops = shops;
     }
 
+    /**
+     * define inflation logic
+     *
+     * @param parent   viewgroup to which the inflated view will be attached to
+     * @param viewType view type of the new view
+     * @return newly inflated view
+     */
     @NonNull
     @Override
     public ShopViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ShopViewHolder(LayoutInflater.from(context).inflate(R.layout.layout_shopping_item, parent, false));
     }
 
+    /**
+     * define binding views and modify them as required
+     *
+     * @param holder   holder to fetch references to views and modify them
+     * @param position position of the current view being modified
+     */
     @Override
     public void onBindViewHolder(@NonNull final ShopViewHolder holder, int position) {
         final Shop shop = shops.get(position);
@@ -55,11 +69,17 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
         });
     }
 
+    /**
+     * get the total number of items to be displayed in the recyclerview
+     *
+     * @return count of items ]
+     */
     @Override
     public int getItemCount() {
         return shops.size();
     }
 
+    //ViewHolder design pattern to help reduce the number of calls to findViewById
     class ShopViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.mainImage)

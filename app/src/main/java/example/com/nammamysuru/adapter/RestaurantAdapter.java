@@ -30,17 +30,31 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
     private Context context;
     private ArrayList<Restaurant> restaurants;
 
+    //constructor to initialize the adapter
     public RestaurantAdapter(Context context, ArrayList<Restaurant> restaurants) {
         this.context = context;
         this.restaurants = restaurants;
     }
 
+    /**
+     * define inflation logic
+     *
+     * @param parent   viewgroup to which the inflated view will be attached to
+     * @param viewType view type of the new view
+     * @return newly inflated view
+     */
     @NonNull
     @Override
     public RestaurantViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new RestaurantViewHolder(LayoutInflater.from(context).inflate(R.layout.layout_restaurant_item, parent, false));
     }
 
+    /**
+     * define binding views and modify them as required
+     *
+     * @param holder   holder to fetch references to views and modify them
+     * @param position position of the current view being modified
+     */
     @Override
     public void onBindViewHolder(@NonNull final RestaurantViewHolder holder, int position) {
         final Restaurant restaurant = restaurants.get(position);
@@ -62,11 +76,17 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
         });
     }
 
+    /**
+     * get the total number of items to be displayed in the recyclerview
+     *
+     * @return count of items ]
+     */
     @Override
     public int getItemCount() {
         return restaurants.size();
     }
 
+    //ViewHolder design pattern to help reduce the number of calls to findViewById
     class RestaurantViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.restaurantImage)

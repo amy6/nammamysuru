@@ -14,25 +14,6 @@ public class Shop implements Serializable{
     private float sampleReviewUserRating;
     private int totalRatings;
 
-    public Shop(int imageId, String name, float rating, String place) {
-        this.imageId = imageId;
-        this.name = name;
-        this.rating = rating;
-        this.place = place;
-    }
-
-    public Shop(String name, float rating, String place, String overview, String sampleReviewUsername, String sampleReview, float sampleReviewUserRating, int totalRatings) {
-        this.name = name;
-        this.rating = rating;
-        this.place = place;
-        this.overview = overview;
-//        this.desc = desc;
-        this.sampleReviewUsername = sampleReviewUsername;
-        this.sampleReview = sampleReview;
-        this.sampleReviewUserRating = sampleReviewUserRating;
-        this.totalRatings = totalRatings;
-    }
-
     public Shop(int imageId, String name, float rating, String place, String overview, String sampleReviewUsername, String sampleReview, float sampleReviewUserRating, int totalRatings) {
         this.imageId = imageId;
         this.name = name;
@@ -64,10 +45,6 @@ public class Shop implements Serializable{
     public String getOverview() {
         return overview;
     }
-
-//    public String getDesc() {
-//        return desc;
-//    }
 
     public String getSampleReviewUsername() {
         return sampleReviewUsername;
