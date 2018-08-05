@@ -57,7 +57,8 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ShopViewHolder
         holder.image.setImageResource(shop.getImageId());
         holder.name.setText(shop.getName());
         holder.place.setText(shop.getPlace());
-        holder.rating.setText(String.valueOf(shop.getRating()).concat("/5"));
+        String rating = String.format(context.getString(R.string.rating), shop.getRating());
+        holder.rating.setText(rating);
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
