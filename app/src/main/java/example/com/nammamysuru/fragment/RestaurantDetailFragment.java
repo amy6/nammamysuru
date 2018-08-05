@@ -13,7 +13,6 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
-import java.util.Locale;
 
 import example.com.nammamysuru.R;
 import example.com.nammamysuru.model.Restaurant;

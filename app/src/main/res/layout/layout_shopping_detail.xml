@@ -16,7 +16,6 @@
 
 
         <LinearLayout
-            android:id="@+id/linear"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:nestedScrollingEnabled="false"
@@ -51,7 +50,6 @@
 
 
             <TextView
-                android:id="@+id/overview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dimens_8dp"
@@ -67,7 +65,6 @@
                 android:text="@string/dummy_text" />
 
             <View
-                android:id="@+id/view2"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_margin="@dimen/dimens_8dp"
