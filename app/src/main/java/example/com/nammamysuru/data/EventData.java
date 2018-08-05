@@ -25,7 +25,7 @@ public class EventData {
         String[] url = resources.getStringArray(R.array.event_url);
 
         for (int i = 0; i < name.length; i++) {
-            Event event = new Event(name[i], place[i], date[i], time[i], url[i]);
+            Event event = new Event(name[i], place[i], time[i], date[i], url[i]);
             events.add(event);
         }
         return events;

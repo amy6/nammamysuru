@@ -52,7 +52,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
         holder.eventName.setText(event.getName());
         holder.eventPlace.setText(event.getPlace());
         holder.eventDate.setText(event.getDate());
-        holder.eventTime.setText(event.getTime());
+        holder.eventTime.setText(event.getTime().concat(" at "));
         holder.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
