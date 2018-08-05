@@ -34,9 +34,10 @@ public class PlaceData {
 
         String[] title = resources.getStringArray(R.array.placeTitle);
         String[] hours = resources.getStringArray(R.array.placeHours);
+        String[] location = resources.getStringArray(R.array.placeLocation);
 
         for (int i = 0; i < mainImgId.length; i++) {
-            Place place = new Place(title[i], mainImgId[i], overlayImgId[i], hours[i]);
+            Place place = new Place(title[i], mainImgId[i], overlayImgId[i], hours[i], location[i]);
             places.add(place);
         }
         return places;

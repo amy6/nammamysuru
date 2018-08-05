@@ -37,6 +37,15 @@
         <item>@string/ranganthittu_hours</item>
     </string-array>
 
+    <string-array name="placeLocation">
+        <item>@string/mysore_palace_location</item>
+        <item>@string/venugopalaswamy_temple_location</item>
+        <item>@string/grs_location</item>
+        <item>@string/krs_location</item>
+        <item>@string/bylakuppe_location</item>
+        <item>@string/ranganthittu_location</item>
+    </string-array>
+
 
     <array name="restaurant_mainImgID">
         <item>@drawable/onesta</item>

@@ -8,12 +8,14 @@ public class Place implements Serializable{
     private int mainImgId;
     private int overlayImgId;
     private String openHours;
+    private String location;
 
-    public Place(String title, int mainImgId, int overlayImgId, String openHours) {
+    public Place(String title, int mainImgId, int overlayImgId, String openHours, String location) {
         this.title = title;
         this.mainImgId = mainImgId;
         this.overlayImgId = overlayImgId;
         this.openHours = openHours;
+        this.location = location;
     }
 
     public String getTitle() {
@@ -30,5 +32,9 @@ public class Place implements Serializable{
 
     public String getOpenHours() {
         return openHours;
+    }
+
+    public String getLocation() {
+        return location;
     }
 }

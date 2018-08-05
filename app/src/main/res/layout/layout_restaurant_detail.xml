@@ -103,7 +103,8 @@
             app:layout_constraintEnd_toStartOf="@+id/call"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/call" />
+            app:layout_constraintTop_toTopOf="@+id/call"
+            tools:targetApi="m" />
 
         <TextView
             android:id="@+id/call"
@@ -123,7 +124,8 @@
             app:layout_constraintEnd_toStartOf="@+id/website"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/directions"
-            app:layout_constraintTop_toBottomOf="@+id/reviewCount" />
+            app:layout_constraintTop_toBottomOf="@+id/reviewCount"
+            tools:targetApi="m" />
 
         <TextView
             android:id="@+id/website"
@@ -142,7 +144,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/call"
-            app:layout_constraintTop_toTopOf="@+id/call" />
+            app:layout_constraintTop_toTopOf="@+id/call"
+            tools:targetApi="m" />
 
         <TextView
             android:id="@+id/about"

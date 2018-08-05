@@ -16,7 +16,7 @@
     <string name="venugopalaswamy_temple">Venugopalaswamy Temple</string>
     <string name="grs">GRS Fantasy Park</string>
     <string name="krs">Krishna Raja Sagara</string>
-    <string name="bylakuppe">Bylakuppe</string>
+    <string name="bylakuppe">Golden Temple</string>
     <string name="ranganthittu">Ranganthittu Bird Sanctuary</string>
 
     <string name="mysore_palace_hours">10:00 am - 05:30 pm</string>
@@ -25,6 +25,13 @@
     <string name="krs_hours">06:30 am - 07:30 pm</string>
     <string name="bylakuppe_hours">09:00 am - 06:00 pm</string>
     <string name="ranganthittu_hours">09:00 am - 06:00 pm</string>
+
+    <string name="mysore_palace_location">Mysore+Palace</string>
+    <string name="venugopalaswamy_temple_location">Venugopala+Swamy+Temple</string>
+    <string name="grs_location">GRS+Fantasy+Park</string>
+    <string name="krs_location">KrishnaRajaSagara+Dam,+Karnataka+571607</string>
+    <string name="bylakuppe_location">Namdroling+Monastery+Golden+Temple</string>
+    <string name="ranganthittu_location">Ranganathittu+Bird+Sanctuary</string>
 
     <string name="la_uppu">La Uppu</string>
     <string name="the_barge">The Barge</string>
