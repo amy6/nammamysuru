@@ -50,11 +50,15 @@
     <string name="bmhabitat">BM Habitat Mall</string>
     <string name="garuda">Garuda Mall</string>
     <string name="forum">Forum Mall</string>
+    <string name="badsha">Badsha Stores</string>
+    <string name="ksic">KSIC Mysore Silk</string>
 
     <string name="mom_place">MG Road</string>
     <string name="bmhabitat_place">Gokulam</string>
     <string name="garuda_place">Albert Victor Road</string>
     <string name="forum_place">Nazarbad</string>
+    <string name="badsha_place">KR Circle</string>
+    <string name="ksic_place">Indira Nagar</string>
 
     <string name="userName">Aadhya Agarwal</string>
     <string name="totalRatings">Read %1$d reviews.</string>

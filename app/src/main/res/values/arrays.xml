@@ -94,10 +94,12 @@
     </array>
 
     <string-array name="shop_name">
-    <item>@string/mom</item>
-    <item>@string/bmhabitat</item>
-    <item>@string/garuda</item>
-    <item>@string/forum</item>
+        <item>@string/mom</item>
+        <item>@string/bmhabitat</item>
+        <item>@string/garuda</item>
+        <item>@string/forum</item>
+        <item>@string/badsha</item>
+        <item>@string/ksic</item>
     </string-array>
 
     <string-array name="shop_place">
@@ -105,6 +107,8 @@
         <item>@string/bmhabitat_place</item>
         <item>@string/garuda_place</item>
         <item>@string/forum_place</item>
+        <item>@string/badsha_place</item>
+        <item>@string/ksic_place</item>
     </string-array>
 
     <array name="shop_mainImgID">
@@ -112,6 +116,8 @@
         <item>@drawable/bmhabitat_mall</item>
         <item>@drawable/garuda_mall</item>
         <item>@drawable/forum_mall</item>
+        <item>@drawable/badsha</item>
+        <item>@drawable/ksic</item>
     </array>
 
     <array name="shop_rating">
@@ -119,6 +125,8 @@
         <item>4.1</item>
         <item>3.4</item>
         <item>4.4</item>
+        <item>4.7</item>
+        <item>4.0</item>
     </array>
 
     <array name="shop_total_ratings">
@@ -126,6 +134,8 @@
         <item>453</item>
         <item>78</item>
         <item>356</item>
+        <item>701</item>
+        <item>163</item>
     </array>
 
     <string-array name="event_name">
