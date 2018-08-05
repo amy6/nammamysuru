@@ -6,6 +6,6 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:orientation="vertical"
-    tools:context=".DetailsActivity">
+    tools:context=".activity.DetailsActivity">
 
 </FrameLayout>
