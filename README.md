@@ -32,6 +32,6 @@ This is a Tour Guide app developed as part of **Udacity Android Basics Nanodegre
 
 ![events](https://user-images.githubusercontent.com/5392993/43688889-25039e24-990f-11e8-9bea-c82f5f988418.jpg)
 
-*8Workflow video of the app**
+**Workflow video of the app**
 
 https://vimeo.com/283315747
