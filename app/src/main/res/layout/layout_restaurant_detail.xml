@@ -10,19 +10,21 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/type"
+        app:layout_constraintTop_toBottomOf="@+id/type">
 
         <ImageView
             android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimens_200dp"
             android:contentDescription="@string/no_desc_available"
+            android:scaleType="centerCrop"
             android:transitionName="restaurantImg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:scaleType="centerCrop"
-            tools:src="@tools:sample/avatars"/>
+            tools:src="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/name"
@@ -90,10 +92,14 @@
             android:layout_marginEnd="@dimen/dimens_8dp"
             android:layout_marginStart="@dimen/dimens_8dp"
             android:drawablePadding="@dimen/dimens_4dp"
+            android:drawableTint="@color/colorAccent"
             android:drawableTop="@drawable/ic_directions"
+            android:elevation="@dimen/dimens_4dp"
             android:gravity="center"
             android:padding="@dimen/dimens_4dp"
             android:text="@string/directions"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
             app:layout_constraintEnd_toStartOf="@+id/call"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -106,10 +112,14 @@
             android:layout_marginEnd="@dimen/dimens_8dp"
             android:layout_marginTop="24dp"
             android:drawablePadding="@dimen/dimens_4dp"
+            android:drawableTint="@color/colorAccent"
             android:drawableTop="@drawable/ic_call"
+            android:elevation="@dimen/dimens_4dp"
             android:gravity="center"
             android:padding="@dimen/dimens_4dp"
             android:text="@string/call"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
             app:layout_constraintEnd_toStartOf="@+id/website"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/directions"
@@ -121,10 +131,14 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimens_8dp"
             android:drawablePadding="@dimen/dimens_4dp"
+            android:drawableTint="@color/colorAccent"
             android:drawableTop="@drawable/ic_public"
+            android:elevation="@dimen/dimens_4dp"
             android:gravity="center"
             android:padding="@dimen/dimens_4dp"
             android:text="@string/website"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/call"
@@ -136,13 +150,13 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimens_8dp"
             android:layout_marginStart="@dimen/dimens_16dp"
-            android:layout_marginTop="@dimen/dimens_16dp"
+            android:layout_marginTop="8dp"
             android:text="@string/about"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/call" />
+            app:layout_constraintTop_toTopOf="@+id/view" />
 
         <TextView
             android:id="@+id/desc"
@@ -158,6 +172,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/about"
             app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/call" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/call"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
 
     </android.support.constraint.ConstraintLayout>
 
