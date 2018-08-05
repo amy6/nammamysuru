@@ -31,4 +31,10 @@ public class DetailsActivity extends AppCompatActivity {
 //        }
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
     }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 }

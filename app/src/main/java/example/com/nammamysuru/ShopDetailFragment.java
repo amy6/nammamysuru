@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +31,7 @@ public class ShopDetailFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
+//        ((AppCompatActivity)getActivity()).getSupportActionBar().hide();
         if (getArguments() != null) {
             Shop shop = (Shop) getArguments().getSerializable(INTENT_EXTRA);
             if (shop != null) {
@@ -53,12 +54,18 @@ public class ShopDetailFragment extends Fragment {
         TextView desc =  view.findViewById(R.id.desc);
         RatingBar ratingBar = view.findViewById(R.id.ratingBar);
         CollapsingToolbarLayout collapsingToolbarLayout = view.findViewById(R.id.collapsingToolbar);
+        Toolbar toolbar = view.findViewById(R.id.toolbar);
+
+        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         TextView userName = view.findViewById(R.id.user_name);
         RatingBar userRating = view.findViewById(R.id.user_rating);
         TextView userReview = view.findViewById(R.id.user_review);
 
-        collapsingToolbarLayout.setTitle("Add some title");
+        collapsingToolbarLayout.setTitle(shop.getName());
         mainImg.setImageResource(shop.getImageId());
         title.setText(shop.getName());
         desc.setText(shop.getOverview());
@@ -72,6 +79,6 @@ public class ShopDetailFragment extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
-        ((AppCompatActivity)getActivity()).getSupportActionBar().show();
+//        ((AppCompatActivity)getActivity()).getSupportActionBar().show();
     }
 }

@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         final FragmentManager fragmentManager = getSupportFragmentManager();
 
         fragmentManager.beginTransaction().add(R.id.container, new PlaceFragment()).commit();
+        setTitle("Places");
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bnv);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -27,15 +28,19 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.places:
                         fragment = new PlaceFragment();
+                        setTitle("Places");
                         break;
                     case R.id.restaurant:
                         fragment = new RestaurantFragment();
+                        setTitle("Restaurants");
                         break;
                     case R.id.shop:
                         fragment = new ShopFragment();
+                        setTitle("Shopping");
                         break;
                     case R.id.event:
                         fragment = new EventFragment();
+                        setTitle("Events");
                         break;
                 }
                 fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
