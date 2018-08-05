@@ -1,7 +1,5 @@
 package example.com.nammamysuru.fragment;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -19,7 +17,7 @@ import example.com.nammamysuru.utils.Utils;
 
 import static example.com.nammamysuru.activity.DetailsActivity.INTENT_EXTRA;
 
-public class PlaceDetailFragment extends Fragment {
+public class PlaceDetailFragment extends Fragment implements View.OnClickListener {
 
     private Place place;
 
@@ -82,18 +80,19 @@ public class PlaceDetailFragment extends Fragment {
 
         Utils.setUpToolbar(getActivity(), toolbar, place.getTitle());
 
-        directions.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q="+place.getLocation()));
-                intent.setPackage("com.google.android.apps.maps");
-                startActivity(intent);
-            }
-        });
+        directions.setOnClickListener(this);
+
         mainImg.setImageResource(place.getOverlayImgId());
         overlayImg.setImageResource(place.getMainImgId());
         title.setText(place.getTitle());
         hours.setText(place.getOpenHours());
         desc.setText(R.string.dummy_text);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (getContext() != null) {
+            Utils.directionsIntent(getContext(),place.getLocation());
+        }
     }
 }

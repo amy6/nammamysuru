@@ -1,7 +1,9 @@
 package example.com.nammamysuru.utils;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Build;
 import android.renderscript.Allocation;
 import android.renderscript.Element;
@@ -12,6 +14,9 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
+
+import example.com.nammamysuru.R;
 
 public class Utils {
 
@@ -55,5 +60,31 @@ public class Utils {
             }
 
         }
+    }
+
+    public static void directionsIntent(Context context, String location) {
+        if (location.length() <= 0) {
+            Toast.makeText(context, R.string.no_location, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q="+location));
+        intent.setPackage("com.google.android.apps.maps");
+        context.startActivity(intent);
+    }
+    public static void phoneIntent(Context context, String phone) {
+        if (phone.length() <= 0) {
+            Toast.makeText(context, R.string.no_phone, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+phone));
+        context.startActivity(intent);
+    }
+    public static void websiteIntent(Context context, String website) {
+        if (website.length() <= 0) {
+            Toast.makeText(context, R.string.no_website, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(website));
+        context.startActivity(intent);
     }
 }

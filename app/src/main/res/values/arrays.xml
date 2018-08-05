@@ -102,6 +102,39 @@
         <item>3.5</item>
     </array>
 
+    <string-array name="restaurant_location">
+        <item>@string/onesta_location</item>
+        <item>@string/hotel_mylari_location</item>
+        <item>@string/the_barge_location</item>
+        <item>@string/la_uppu_location</item>
+        <item>@string/old_house_location</item>
+        <item>@string/frosting_cafe_location</item>
+        <item>@string/good_vibes_location</item>
+        <item>@string/indra_cafe_location</item>
+    </string-array>
+
+    <string-array name="restaurant_phone">
+        <item>@string/onesta_phone</item>
+        <item>@string/hotel_mylari_phone</item>
+        <item>@string/the_barge_phone</item>
+        <item>@string/la_uppu_phone</item>
+        <item>@string/old_house_phone</item>
+        <item>@string/frosting_cafe_phone</item>
+        <item>@string/good_vibes_phone</item>
+        <item>@string/indra_cafe_phone</item>
+    </string-array>
+
+    <string-array name="restaurant_website">
+        <item>@string/onesta_website</item>
+        <item>@string/hotel_mylari_website</item>
+        <item>@string/the_barge_website</item>
+        <item>@string/la_uppu_website</item>
+        <item>@string/old_house_website</item>
+        <item>@string/frosting_cafe_website</item>
+        <item>@string/good_vibes_website</item>
+        <item>@string/indra_cafe_website</item>
+    </string-array>
+
     <string-array name="shop_name">
         <item>@string/mom</item>
         <item>@string/bmhabitat</item>

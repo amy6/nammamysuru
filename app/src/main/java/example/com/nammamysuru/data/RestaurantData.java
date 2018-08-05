@@ -35,9 +35,12 @@ public class RestaurantData {
         String[] title = resources.getStringArray(R.array.restaurant_name);
         String[] type = resources.getStringArray(R.array.restaurant_type);
         String[] place = resources.getStringArray(R.array.restaurant_place);
+        String[] location = resources.getStringArray(R.array.restaurant_location);
+        String[] phone = resources.getStringArray(R.array.restaurant_phone);
+        String[] website = resources.getStringArray(R.array.restaurant_website);
 
         for (int i = 0; i < mainImgId.length; i++) {
-            Restaurant restaurant = new Restaurant(title[i], mainImgId[i], type[i], rating[i], place[i]);
+            Restaurant restaurant = new Restaurant(title[i], mainImgId[i], type[i], rating[i], place[i], location[i], phone[i], website[i]);
             restaurants.add(restaurant);
         }
 

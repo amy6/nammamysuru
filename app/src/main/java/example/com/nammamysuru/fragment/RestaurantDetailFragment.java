@@ -18,7 +18,7 @@ import example.com.nammamysuru.utils.Utils;
 
 import static example.com.nammamysuru.activity.DetailsActivity.INTENT_EXTRA;
 
-public class RestaurantDetailFragment extends Fragment {
+public class RestaurantDetailFragment extends Fragment implements View.OnClickListener {
 
     private Restaurant restaurant;
 
@@ -77,9 +77,16 @@ public class RestaurantDetailFragment extends Fragment {
         TextView desc =  view.findViewById(R.id.desc);
         TextView rating = view.findViewById(R.id.rating);
         RatingBar ratingBar = view.findViewById(R.id.ratingBar);
+        TextView directions = view.findViewById(R.id.directions);
+        TextView call = view.findViewById(R.id.call);
+        TextView website = view.findViewById(R.id.website);
         Toolbar toolbar = view.findViewById(R.id.toolbar);
 
         Utils.setUpToolbar(getActivity(), toolbar, restaurant.getName());
+
+        directions.setOnClickListener(this);
+        call.setOnClickListener(this);
+        website.setOnClickListener(this);
 
         mainImg.setImageResource(restaurant.getImageId());
         title.setText(restaurant.getName());
@@ -87,5 +94,23 @@ public class RestaurantDetailFragment extends Fragment {
         desc.setText(R.string.dummy_text);
         rating.setText(String.valueOf(restaurant.getRating()));
         ratingBar.setRating(restaurant.getRating());
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (getContext() != null) {
+            switch (view.getId()) {
+                case R.id.directions:
+                    Utils.directionsIntent(getContext(), restaurant.getLocation());
+                    break;
+                case R.id.call:
+                    Utils.phoneIntent(getContext(), restaurant.getPhone());
+                    break;
+                case R.id.website:
+                    Utils.websiteIntent(getContext(), restaurant.getWebsite());
+                    break;
+            }
+        }
+
     }
 }
