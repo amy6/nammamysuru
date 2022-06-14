@@ -1,5 +1,24 @@
 <resources>
-    <string name="app_name">Namma Mysuru</string>
+    <string name="city_name">ListView</string>
+    <string-array name="city">
+        <item>Mysuru</item>
+        <item>Jaipur</item>
+        <item>Delhi</item>
+    </string-array>
+
+    <string name="red_fort">Red fort</string>
+    <string name="qutub_minar">Qutub Minar</string>
+    <string name="india_gate">India Gate</string>
+    <string name="lotus_temple">Lotus Temple</string>
+
+    <string name="amber_palace">Amber Palace</string>
+    <string name="hawa_mahal">Hawa mahal</string>
+    <string name="city_palace">City Palace</string>
+    <string name="nahargarh_fort">Nahargarh Fort</string>
+
+
+
+    <string name="app_name">City Guide</string>
     <string name="places">Places</string>
     <string name="restaurants">Restaurants</string>
     <string name="shopping">Shopping</string>
@@ -41,6 +60,20 @@
     <string name="old_house">The Old House</string>
     <string name="good_vibes">Cafe Good Vibes</string>
     <string name="frosting_cafe">Frosting Cafe</string>
+
+    <!-- Jaipur restaurants-->
+    <string name="house_of_han">House of Han</string>
+    <string name="okhra">Okhra</string>
+    <string name="dragon_house">Dragon House</string>
+    <string name="house_of_han_location">House+of+Han+Jaipur</string>
+    <string name="okhra_location">Okhra+restaurant+Jaipur</string>
+    <string name="deagon_house">dragon+house+jaipur</string>
+
+    <!--delhi restaurant-->
+    <string name="bukhara">Bukhara</string>
+    <string name="rajinder_da_dhaba">Rajinder Da Dhaba</string>
+    <string name="sagar_ratna">Sagar Ratna</string>
+
 
     <string name="onesta_location">Onesta</string>
     <string name="hotel_mylari_location">Hotel+Vinayaka+Original+Mylari</string>
@@ -118,6 +151,7 @@
     <string name="pratigam">Pratigam 2018</string>
     <string name="janmashtami">Sri Krishna Janmashtami</string>
     <string name="marathon">Celebration Mysore &#189; Marathon &amp; 10k</string>
+
 
     <string name="navikotsava_place">Kalamandira</string>
     <string name="live_music_place">Cornucopia</string>

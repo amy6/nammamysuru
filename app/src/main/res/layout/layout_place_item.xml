@@ -42,18 +42,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/mainImage"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimens_160dp"
-                android:contentDescription="@string/no_desc_available"
-                android:scaleType="centerCrop"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:src="@tools:sample/avatars" />
+<!--            <ImageView-->
+<!--                android:id="@+id/mainImage"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/dimens_160dp"-->
+<!--                android:contentDescription="@string/no_desc_available"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.0"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                tools:src="@tools:sample/avatars" />-->
 
             <TextView
                 android:id="@+id/titleText"
@@ -67,7 +67,7 @@
                 android:layout_marginTop="@dimen/dimens_8dp"
                 android:textAlignment="center"
                 android:textAppearance="?android:textAppearanceLarge"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/guideline"

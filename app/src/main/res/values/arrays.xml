@@ -10,6 +10,20 @@
         <item>@drawable/ranganthittu_overlay</item>
     </array>
 
+    <array name="place_mainImgID1"><!-- Delhi-->
+        <item>@drawable/delhi_fort</item>
+        <item>@drawable/lotus_temple</item>
+        <item>@drawable/qutub_minar</item>
+
+    </array>
+
+    <array name="place_mainImgID2"><!-- Jaipur -->
+        <item>@drawable/city_palace</item>
+        <item>@drawable/hawa_mahal</item>
+        <item>@drawable/nahargarh_fort</item>
+        <item>@drawable/amberfort</item>
+    </array>
+
     <array name="place_overlayImgID">
         <item>@drawable/mysore_palace_main</item>
         <item>@drawable/venugopalaswamy_temple_main</item>
@@ -19,6 +33,19 @@
         <item>@drawable/ranganthittu_main</item>
     </array>
 
+    <array name="place_overlayImgID1">
+        <item>@drawable/delhi_fort</item>
+        <item>@drawable/lotus_temple</item>
+        <item>@drawable/qutub_minar</item>
+    </array>
+
+    <array name="place_overlayImgID2">
+        <item>@drawable/city_palace</item>
+        <item>@drawable/hawa_mahal</item>
+        <item>@drawable/nahargarh_fort</item>
+        <item>@drawable/amberfort</item>
+    </array>
+
     <string-array name="placeTitle">
         <item>@string/mysore_palace</item>
         <item>@string/venugopalaswamy_temple</item>
@@ -26,6 +53,17 @@
         <item>@string/krs</item>
         <item>@string/bylakuppe</item>
         <item>@string/ranganthittu</item>
+    </string-array>
+    <string-array name="placeTitle1">
+        <item>"Delhi Fort"</item>
+        <item>"lotus temple"</item>
+        <item>"qutub minar"</item>
+    </string-array>
+    <string-array name="placeTitle2">
+        <item>"city palace"</item>
+        <item>"hawa mahal"</item>
+        <item>"nahargarh fort"</item>
+        <item>"amber fort"</item>
     </string-array>
 
     <string-array name="placeHours">
@@ -37,6 +75,19 @@
         <item>@string/ranganthittu_hours</item>
     </string-array>
 
+    <string-array name="placeHours1">
+        <item>@string/mysore_palace_hours</item>
+        <item>@string/venugopalaswamy_temple_hours</item>
+        <item>@string/grs_hours</item>
+    </string-array>
+
+    <string-array name="placeHours2">
+        <item>@string/mysore_palace_hours</item>
+        <item>@string/venugopalaswamy_temple_hours</item>
+        <item>@string/grs_hours</item>
+        <item>@string/ranganthittu_hours</item>
+    </string-array>
+
     <string-array name="placeLocation">
         <item>@string/mysore_palace_location</item>
         <item>@string/venugopalaswamy_temple_location</item>
@@ -44,6 +95,19 @@
         <item>@string/krs_location</item>
         <item>@string/bylakuppe_location</item>
         <item>@string/ranganthittu_location</item>
+    </string-array>
+
+    <string-array name="placeLocation1">
+        <item>"Delhi+fort"</item>
+        <item>"lotus+temple"</item>
+        <item>"qutub+minar</item>
+    </string-array>
+
+    <string-array name="placeLocation2">
+        <item>"city+palace+jaipur"</item>
+        <item>"hawa+mahal+jaipur"</item>
+        <item>"nahargarh+fort+jaipur"</item>
+        <item>"amber+fort+jaipur"</item>
     </string-array>
 
 
@@ -58,6 +122,18 @@
         <item>@drawable/indra_cafe</item>
     </array>
 
+    <array name="restaurant_mainImgID1">
+        <item>@drawable/bukhara_delhi</item>
+        <item>@drawable/sagar_ratna_delhi</item>
+        <item>@drawable/rajinder_da_dhaba_jaipur</item>
+    </array>
+
+    <array name="restaurant_mainImgID2">
+        <item>@drawable/dragonhouse_jaipur</item>
+        <item>@drawable/okra_jaipur</item>
+        <item>@drawable/house_of_han</item>
+    </array>
+
     <string-array name="restaurant_name">
         <item>@string/onesta</item>
         <item>@string/hotel_mylari</item>
@@ -69,6 +145,18 @@
         <item>@string/indra_cafe</item>
     </string-array>
 
+    <string-array name="restaurant_name1">
+        <item>"bukhara"</item>
+        <item>"sagar ratna"</item>
+        <item>"rajinder da dhaba"</item>
+    </string-array>
+
+    <string-array name="restaurant_name2">
+        <item>"dragon house"</item>
+        <item>"okra"</item>
+        <item>"house of han"</item>
+    </string-array>
+
     <string-array name="restaurant_type">
         <item>@string/italian</item>
         <item>@string/indian</item>
@@ -78,6 +166,19 @@
         <item>@string/cafe</item>
         <item>@string/italian</item>
         <item>@string/indian</item>
+    </string-array>
+
+    <string-array name="restaurant_type1">
+        <item>@string/italian</item>
+        <item>@string/indian</item>
+        <item>@string/indian</item>
+
+    </string-array>
+
+    <string-array name="restaurant_type2">
+        <item>@string/chinese</item>
+        <item>@string/indian</item>
+        <item>@string/chinese</item>
     </string-array>
 
     <string-array name="restaurant_place">
@@ -102,12 +203,36 @@
         <item>3.5</item>
     </array>
 
+    <array name="restaurant_rating1">
+        <item>4.9</item>
+        <item>3.5</item>
+        <item>4.2</item>
+    </array>
+
+    <array name="restaurant_rating2">
+        <item>4.9</item>
+        <item>3.5</item>
+        <item>4.2</item>
+    </array>
+
     <array name="restaurant_review_count">
         <item>1432</item>
         <item>343</item>
         <item>2324</item>
         <item>132</item>
         <item>57</item>
+        <item>453</item>
+        <item>122</item>
+        <item>1163</item>
+    </array>
+
+    <array name="restaurant_review_count1">
+        <item>1500</item>
+        <item>343</item>
+        <item>2324</item>
+    </array>
+
+    <array name="restaurant_review_count2">
         <item>453</item>
         <item>122</item>
         <item>1163</item>
@@ -124,6 +249,20 @@
         <item>@string/indra_cafe_location</item>
     </string-array>
 
+    <string-array name="restaurant_location1">
+        <item>"bukhara +delhi"</item>
+        <item>"sagar+ratna+delhi"</item>
+        <item>"rajinder+da+dhaba+delhi"</item>
+
+    </string-array>
+
+    <string-array name="restaurant_location2">
+        <item>"dragon+house+jaipur"</item>
+        <item>"okra+jaipur"</item>
+        <item>"house+of+han+jaipur"</item>
+
+    </string-array>
+
     <string-array name="restaurant_phone">
         <item>@string/onesta_phone</item>
         <item>@string/hotel_mylari_phone</item>
@@ -135,6 +274,19 @@
         <item>@string/indra_cafe_phone</item>
     </string-array>
 
+    <string-array name="restaurant_phone1">
+        <item>@string/onesta_phone</item>
+        <item>@string/hotel_mylari_phone</item>
+        <item>@string/the_barge_phone</item>
+    </string-array>
+
+
+    <string-array name="restaurant_phone2">
+        <item>@string/onesta_phone</item>
+        <item>@string/hotel_mylari_phone</item>
+        <item>@string/the_barge_phone</item>
+    </string-array>
+
     <string-array name="restaurant_website">
         <item>@string/onesta_website</item>
         <item>@string/hotel_mylari_website</item>
@@ -144,6 +296,18 @@
         <item>@string/frosting_cafe_website</item>
         <item>@string/good_vibes_website</item>
         <item>@string/indra_cafe_website</item>
+    </string-array>
+
+    <string-array name="restaurant_website1">
+        <item>@string/onesta_website</item>
+        <item>@string/hotel_mylari_website</item>
+        <item>@string/the_barge_website</item>
+    </string-array>
+
+    <string-array name="restaurant_website2">
+        <item>@string/onesta_website</item>
+        <item>@string/hotel_mylari_website</item>
+        <item>@string/the_barge_website</item>
     </string-array>
 
     <string-array name="shop_name">
@@ -217,6 +381,18 @@
         <item>@string/marathon</item>
     </string-array>
 
+    <string-array name="event_name_delhi">
+        <item>"International Mango Festival</item>
+        <item>"Phoolwalon-ki-Sair"</item>
+        <item>"Qutub Festival"</item>
+    </string-array>
+
+    <string-array name="event_name_jaipur">
+        <item>"INTERNATIONAL KITE FLYING COMPETITION"</item>
+        <item>@string/janmashtami</item>
+        <item>"10K Marathon"</item>
+    </string-array>
+
     <string-array name="event_place">
         <item>@string/navikotsava_place</item>
         <item>@string/live_music_place</item>
@@ -225,12 +401,37 @@
         <item>@string/marathon_place</item>
     </string-array>
 
+    <string-array name="event_place1">
+        <item>"Delhi Haat"</item>
+        <item>"Mehrauli"</item>
+        <item>"Qutb Minar complex</item>
+    </string-array>
+
+    <string-array name="event_place2">
+        <item>"Umaid bhavan palace"</item>
+        <item>"ISKON"</item>
+        <item>"Ram Niwas Garden"</item>
+
+    </string-array>
+
+
+
     <string-array name="event_date">
         <item>@string/navikotsava_date</item>
         <item>@string/live_music_date</item>
         <item>@string/pratigam_date</item>
         <item>@string/janmashtami_date</item>
         <item>@string/marathon_date</item>
+    </string-array>
+    <string-array name="event_date1">
+        <item>@string/navikotsava_date</item>
+        <item>@string/live_music_date</item>
+        <item>@string/pratigam_date</item>
+    </string-array>
+    <string-array name="event_date2">
+        <item>@string/navikotsava_date</item>
+        <item>@string/live_music_date</item>
+        <item>@string/pratigam_date</item>
     </string-array>
 
     <string-array name="event_time">
@@ -240,6 +441,17 @@
         <item>@string/janmashtami_time</item>
         <item>@string/marathon_time</item>
     </string-array>
+    <string-array name="event_time1">
+        <item>@string/navikotsava_time</item>
+        <item>@string/live_music_time</item>
+        <item>@string/pratigam_time</item>
+    </string-array>
+
+    <string-array name="event_time2">
+        <item>@string/navikotsava_time</item>
+        <item>@string/live_music_time</item>
+        <item>@string/pratigam_time</item>
+    </string-array>
 
     <string-array name="event_url">
         <item>@string/navikotsava_url</item>
@@ -247,6 +459,18 @@
         <item>@string/pratigam_url</item>
         <item>@string/janmashtami_url</item>
         <item>@string/marathon_url</item>
+    </string-array>
+
+    <string-array name="event_url1">
+        <item>@string/navikotsava_url</item>
+        <item>@string/live_music_url</item>
+        <item>@string/pratigam_url</item>
+    </string-array>
+
+    <string-array name="event_url2">
+        <item>@string/navikotsava_url</item>
+        <item>@string/live_music_url</item>
+        <item>@string/pratigam_url</item>
     </string-array>
 
 </resources>

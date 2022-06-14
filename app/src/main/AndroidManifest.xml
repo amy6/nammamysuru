@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="example.com.nammamysuru">
+    package="example.com.cityguide">
 
     <application
         android:allowBackup="true"
@@ -9,15 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name="example.com.cityguide.activity.MainActivity">
         </activity>
-        <activity android:name=".activity.DetailsActivity"
+        <activity android:name="example.com.cityguide.activity.DetailsActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-    </application>
+
+    <activity android:name="example.com.cityguide.activity.StartActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+</application>
 
 </manifest>

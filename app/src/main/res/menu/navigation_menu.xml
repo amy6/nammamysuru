@@ -9,9 +9,9 @@
         android:title="Restaurants"
         android:icon="@drawable/ic_restaurant"/>
 
-    <item android:id="@+id/shop"
-        android:title="Shopping"
-        android:icon="@drawable/ic_shopping_basket"/>
+<!--    <item android:id="@+id/shop"-->
+<!--        android:title="Shopping"-->
+<!--        android:icon="@drawable/ic_shopping_basket"/>-->
 
     <item android:id="@+id/event"
         android:title="Events"
